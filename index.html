@@ -415,9 +415,9 @@
 $(".icon").click( function(event){
 event.preventDefault();
 if ( $(this).hasClass("inout") ) {
-$(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
-} else {
 $(".demo_pannel_box").stop().animate({left:"0px"}, 500);
+} else {
+$(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
 }
 $(this).toggleClass("inout");
 return false;
