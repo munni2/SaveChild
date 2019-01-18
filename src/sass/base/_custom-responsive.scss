@@ -1,0 +1,101 @@
+/* Desktop Layout: 992px.  */
+@media only screen and (min-width: 992px) {
+	.img-wraper{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+	.donation-area{
+		@include background('../../src/images/donate-bg.jpg');
+	}
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+   .single-banner-txt{
+		h1{
+			font-size: 3.2em !important;
+		}
+	}
+	.img-wraper{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+	.donation-area{
+		@include background('../../src/images/donate-bg.jpg');
+	}
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+	
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+	.single-banner-txt{
+		h1{
+			font-size: 3.2em !important;
+		}
+		a{
+			width: 140px !important;
+		}
+	}
+	.single-img-wraper{
+		padding: 1% 0%;
+	}
+	.donate-form {
+    	padding: 50px 10px !important;
+	}
+	.header-area{
+	    height: 565px !important;
+	}
+	.content-overlay{
+		display: none !important;
+	}
+	.sub {
+    	text-align: center !important;
+	}
+	.team_area .one {
+    	padding: 3% 0%;
+	}
+}
+
+
+@media screen and (min-width: 849px) {
+    .donate-wraper{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+
+	.donate-count-area {
+	   @include background('../../src/images/donate-bg.jpg');
+	    position: relative;
+	    padding: 5% 0;
+	    &:before{
+	    	position: absolute;
+		    left: 0;
+		    content: "";
+		    top: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-color: rgba(0, 0, 0, .7);
+	    }
+	    .donate-count {
+		    width: 60%;
+		    border: 2px solid #fff;
+		    position: relative;
+
+		    .donate-progress-box {
+			    position: absolute;
+			    right: -50%;
+			    top: 50%;
+			    transform: translate(0, -50%);
+			    background-color: rgba(0, 0, 0, .8);
+			    color: #fff;
+			    padding: 50px;
+			    width: 100%;
+			}
+		}
+	}
+}
+

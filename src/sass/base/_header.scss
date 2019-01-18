@@ -1,0 +1,46 @@
+@import 'base/color';
+@import 'base/custon-font-style';
+@import 'base/custom-mixin';
+@import 'base/custom-extend';
+
+.logo-img{
+    height: auto;
+    max-width: 100%;
+    width: 189px;
+}
+
+.header-area{
+    @include background('../../src/images/banner.jpg');
+    background-size: 100% 100%;
+    height: 660px;
+}
+.nav-link{
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav {
+    margin: 0; 
+    float: right;
+    ul {
+        padding-top: 0px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 12px;
+            a{
+                @extend .nav-link;
+                &:hover{
+                   @extend .nav-link;
+                   color: $Cabaret;
+               }
+            }
+        }
+    }
+}
+.navbar-dark .navbar-toggler {
+    color: $white;
+    border-color: $white;
+}

@@ -1,0 +1,275 @@
+/*@import 'header';*/
+@import 'base/color';
+@import 'base/custon-font-style';
+@import 'base/custom-mixin';
+@import 'base/custom-extend';
+@import 'base/header';
+@import 'base/custom-responsive';
+@import 'base/theme';
+
+body{
+	background-color: #F6F6F6;
+}
+
+.responsive-class{
+	height: auto;
+	width: 100%;
+}
+
+
+.single-banner-txt{
+	transform: translate(0%, 25%);	
+	h1{
+		font-family: $primary_font_family;
+		color: $white;
+		font-size: $largerFont;
+		span{
+			color: $Cabaret;
+		}
+	}
+	p{
+		color: $white;
+		font-size: $smallFont;
+	}
+	a{
+		@extend .tem-btn;
+		&:hover{
+			text-decoration:none;
+		}
+	}
+}
+
+.donate-wraper{
+
+	.single-donate-wraper{
+		padding: 50px 100px 50px 20px;
+		h2{
+			@extend %headingstyle;
+			position: relative;
+		}
+		a{
+			@extend .tem-btn;
+			&:hover{
+				text-decoration:none;
+			}
+		}
+	}
+	
+	.donate-wraper-bg-one {
+	    @include background('../../src/images/img1.jpg');
+	    position: relative;
+		&:before{
+			background-color: rgba(0, 0, 0, .6);
+			@extend %overlay;
+		}
+	}
+	.donate-wraper-bg-two{
+		@include background('../../src/images/img2.jpg');
+		position: relative;
+		&:before{
+			background-color: $Cabaret;
+			opacity: 0.6;
+			@extend %overlay;
+		}
+	}
+	.donate-wraper-bg-three{
+		@include background('../../src/images/img3.jpg');
+		position: relative;
+		&:before{
+			background-color: rgba(0, 0, 0, .6);
+			@extend %overlay;
+		}
+	}
+}
+
+.separate::after {
+    position: absolute;
+    left: 100%;
+    top: 18px;
+    content: "";
+    background: #CC446C padding-box content-box;
+    padding: 2px 7px 2px 0;
+    border-top: 1px solid #CC446C;
+    width: 115px;
+    height: 6px;
+}
+
+.txt-area{
+	padding-top: 30px;
+	text-align: center;
+	h2{
+		@extend %headingstyle;
+		color: $Emperor;
+	}
+}
+
+.pullpush-area{
+	.mb{
+		padding: 40px 0; 
+	}
+	h2{
+		@extend %headingstyle;
+		color: $Emperor;
+	}
+}
+
+.box-area{
+	padding: 0px 0 40px 0;
+	.service-content{
+		text-align: center;
+		@extend %boxstyle;
+		&:hover{
+			box-shadow: 11px 11px 10px rgba(0, 0, 0, 0.1);
+        }
+		h3{
+			@extend %headingstyle;
+			color: $Emperor;
+			font-size: 27px;
+		}
+		.service-icon{
+			i{
+				font-size: 30px;
+			    color: $Cabaret;
+			    width: 60px;
+			    height: 60px;
+			    line-height: 60px;
+			    border-radius: 50%;
+			    position: relative;
+			    border: 1px solid $Cabaret;
+			    text-align: center;
+			    margin: 30px 0;
+			}
+		}
+	}
+}
+
+.img-wraper{
+	padding: 3% 0% 0% 0%;
+	.single-img-wraper{
+		position: relative;
+		&:hover{
+			opacity: 0.6;
+  			filter: alpha(opacity=100);
+		}
+	}
+}
+
+.donation-area{
+	.donate-form {
+	    padding: 50px;
+	    position: relative;
+
+	    &:before{
+		    @extend %overlay;
+		    background-color: rgba(0, 0, 0, .7);
+		}
+		
+		input {
+			@include focus(text email password) {
+				@extend %input_selet_style;
+			}
+		}
+		.select-amount{
+			label{
+			    margin-right: 10px;
+			    margin-bottom: 15px;
+			    color: #fff;
+			}
+		}
+		select{
+			@extend %input_selet_style;
+		}
+	}
+	.form-group {
+	    margin-bottom: 20px;
+
+	    h3{
+	    	color: #fff;
+		    margin-bottom: 15px;
+		    text-transform: capitalize;
+	    }
+	}
+}
+
+.team_area{
+	padding: 3% 0% 5% 0%;
+	.one{
+	  	position: relative;
+	  	text-align: center;
+
+	  	.content-overlay {
+			@include border-radius(50%); 
+			@extend %overlay;
+			opacity: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			left:13px;
+			background-color:rgba($Cabaret, 0.8);
+			color: #fafafa;
+			font-size: 12px;
+			width:90%;
+			max-width: 300px;
+			@include transition;
+
+			&:hover {
+			    opacity: 1;
+			}
+		}
+		.responsive-class1{
+			height: auto;
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+}
+
+.subscribe-area{
+	padding: 2% 0% 3% 0%;
+
+	.sub{
+		padding: 0;
+		.sub-btn{
+			padding: 2.5% 10%;
+			border-radius: 0px;
+			background-color: $Cabaret;
+			border: 1px solid $Cabaret;
+		}
+	}
+	input {
+		@include focus(text email password) {
+			@extend %input_selet_style;
+			border: 1px solid #ccc;
+			border-radius: 0px;
+		}
+	}
+}
+
+.footer-area{
+	background-color: #151515;
+	color: #fff;
+	padding: 3% 0%;
+	.social-bar{
+		text-align: center;
+		a{
+			text-decoration: none;
+			i{
+				background-color: $Cabaret;
+				color: #fff;
+				width: 50px;
+				height: 50px;
+				display: table-cell;
+         		vertical-align: middle;
+         		@include transition;
+         		&:hover{
+					@include border-radius(50%);
+					@include transition;
+				}
+			}
+		}
+	}
+}
+
+
+
+
