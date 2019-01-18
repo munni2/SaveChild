@@ -380,6 +380,19 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
     <script type="text/javascript">
+         $(document).ready(function(){
+            $(".icon").click( function(){
+            event.preventDefault();
+            if ( $(this).hasClass("inout") ) {
+            $(".demo_pannel_box").stop().animate({left:"0px"}, 500);
+            } else {
+            $(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
+            }
+            $(this).toggleClass("inout");
+            return false;
+            });
+        });
+
         $(document).ready(function(){
             $("span.color-1").click(function(){
                 $("body").removeClass().addClass("color-1-bar") ;
@@ -408,24 +421,6 @@
             $("span.color-9").click(function(){
                 $("body").removeClass().addClass("color-9-bar");
             });
-
-
-
-            
-$(".icon").click( function(event){
-event.preventDefault();
-if ( $(this).hasClass("inout") ) {
-$(".demo_pannel_box").stop().animate({left:"0px"}, 500);
-} else {
-$(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
-}
-$(this).toggleClass("inout");
-return false;
-});
-
-
-
-
         });
 
 
